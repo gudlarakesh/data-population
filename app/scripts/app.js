@@ -32,6 +32,11 @@ angular
         controller: 'PercentageCtrl',
         controllerAs: 'detail'
       })
+      .when('/india', {
+        templateUrl: 'views/india.html',
+        controller: 'IndiaCtrl',
+        controllerAs: 'india'
+      })
       .otherwise({
         redirectTo: '/'
       });

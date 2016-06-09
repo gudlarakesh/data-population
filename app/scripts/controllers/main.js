@@ -22,6 +22,7 @@ angular.module('dataPopulationApp')
 
     function init(){
       dataService.getPopulation(vm.mySelect.country,vm.mySelect.year).then(function(result){
+        result.shift()
         vm.populationResult = result;
       },function(error){
         console.log(error);
@@ -37,6 +38,7 @@ angular.module('dataPopulationApp')
 
     function selectChange(a,b){
       dataService.getPopulation(a,b).then(function(result){
+        result.shift()
         vm.populationResult = result;
       },function(error){
         console.log(error);

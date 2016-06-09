@@ -1,20 +1,31 @@
-<div class="container">
+<div class="container" ng-init="india.init()">
+<h1>India - 2014</h1>
   <div class="row">
     <div class="col-md-4">
-      Age
+      <h2>Age</h2>
     </div>
     <div class="col-md-4">
-      Male
+      <h2>Male</h2>
     </div>
     <div class="col-md-4">
-      Female
+      <h2>Female</h2>
     </div>
   </div>
   <div class="row">
-    <div class="col-md-4">
-      
+    <div class="col-md-4" >
+    <span ng-repeat="d in india.indiaMaleData">
+      <h2>{{d[2]}}</h2>
+    </span>
     </div>
-    <div class="col-md-4"></div>
-    <div class="col-md-4"></div>
+    <div class="col-md-4" >
+    <span ng-repeat="M in india.indiaMaleData">
+      <h2>{{M[3]}}</h2>
+    </span>
+    </div>
+    <div class="col-md-4" >
+    <span ng-repeat="F in india.indiaFemaleData">
+      <h2>{{F[3]}}</h2>
+    </span>
+    </div>
   </div>
 </div>
