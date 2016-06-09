@@ -17,6 +17,18 @@ angular.module('dataPopulationApp')
     vm.mySelect = {};
     vm.selectChange = selectChange;
     vm.populationResult = [];
+    vm.init = init;
+    vm.year = [];
+
+    function init(){
+      dataService.getPopulation(vm.mySelect.country,vm.mySelect.year).then(function(result){
+        vm.populationResult = result;
+      },function(error){
+        console.log(error);
+      });
+    }
+
+    vm.year = [2011,2012,2013,2014];
 
     vm.mySelect = {
       country : "IN",
@@ -28,7 +40,7 @@ angular.module('dataPopulationApp')
         vm.populationResult = result;
       },function(error){
         console.log(error);
-      })
+      });
     }
 
   }

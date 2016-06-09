@@ -3,3 +3,17 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
+body{
+  // background-color: #000;
+  position: relative; 
+}
+.menu{
+  float: right;
+  li{
+    padding: 10px;
+  }
+}
+
+#mainPage{
+  background-color: #f0f0f0;
+}
