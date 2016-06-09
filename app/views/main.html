@@ -1,7 +1,12 @@
-<div class="container" id="mainPage" ng-init="main.init()">
+<div class="container-fluid" id="mainPage" ng-init="main.init()">
 <h1>Population of given country</h1>
+  <canvas id="line" class="chart chart-line" chart-data="data"
+  chart-labels="labels" chart-legend="true" chart-series="series"
+  chart-click="onClick" >
+</canvas> 
   <div class="row">
     <div class="col-md-6">
+    <h3>Select country</h3>
       <md-select  ng-model="main.mySelect.country" ng-change="main.selectChange(main.mySelect.country, main.mySelect.year)">
         <md-option value="IN">India</md-option>
         <md-option value="US">United States</md-option>
@@ -10,6 +15,7 @@
       </md-select>
     </div>
     <div class="col-md-6">
+    <h3>Select year</h3>
       <md-select ng-model="main.mySelect.year" ng-change="main.selectChange(main.mySelect.country, main.mySelect.year)">
         <md-option value="{{y}}" ng-repeat="y in main.year">{{y}}</md-option>
       </smd-elect>

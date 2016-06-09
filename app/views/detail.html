@@ -1,7 +1,12 @@
-<div class="container" ng-init="">
+<div class="container">
   <h2>Percentage Population</h2>
+  <canvas id="line" class="chart chart-line" chart-data="data"
+  chart-labels="labels" chart-legend="true" chart-series="series"
+  chart-click="onClick" >
+  </canvas> 
   <div class="row">
     <div class="col-md-4">
+    <h3>Select country</h3>
       <md-select  ng-model="detail.mySelect.country" ng-change="detail.selectChange(detail.mySelect.country, detail.mySelect.yearOne, detail.mySelect.yearTwo)">
         <md-option value="IN">India</md-option>
         <md-option value="US">United States</md-option>
@@ -10,6 +15,7 @@
       </md-select>
     </div>
     <div class="col-md-4">
+    <h3>Select year</h3>
       <md-select ng-model="detail.mySelect.yearOne" ng-change="detail.selectChange(detail.mySelect.country, detail.mySelect.yearOne, detail.mySelect.yearTwo)">
         <md-option value="2010">2010</md-option>
         <md-option value="2011">2011</md-option>
@@ -19,6 +25,7 @@
       </md-select>
     </div>
     <div class="col-md-4">
+    <h3>Select Year</h3>
       <md-select ng-model="detail.mySelect.yearTwo" ng-change="detail.selectChange(detail.mySelect.country, detail.mySelect.yearOne, detail.mySelect.yearTwo)">
         <md-option value="2010">2010</md-option>
         <md-option value="2011">2011</md-option>

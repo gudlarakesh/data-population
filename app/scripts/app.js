@@ -18,9 +18,13 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'ngMaterial'
+    'ngMaterial',
+    'chart.js'
   ])
   .config(function ($routeProvider) {
+    (function (ChartJsProvider) {
+  ChartJsProvider.setOptions({ colours : [ '#803690', '#00ADF9', '#DCDCDC', '#46BFBD', '#FDB45C', '#949FB1', '#4D5360'] });
+}); 
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
