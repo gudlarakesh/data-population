@@ -8,10 +8,4 @@
  * Controller of the dataPopulationApp
  */
 angular.module('dataPopulationApp')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+  .controller('MainCtrl', MainCtrl);
