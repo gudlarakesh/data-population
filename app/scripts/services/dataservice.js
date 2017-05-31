@@ -24,7 +24,7 @@ angular.module('dataPopulationApp')
       var d = $q.defer();
       var result = $http({
         method: 'GET',
-        url: 'http://api.census.gov/data/timeseries/idb/1year?get=AREA_KM2,NAME,AGE,POP&FIPS=IN&time=2014&SEX=2' + key
+        url: 'https://api.census.gov/data/timeseries/idb/1year?get=AREA_KM2,NAME,AGE,POP&FIPS=IN&time=2014&SEX=2' + key
       });
       result.success(function(data,status,header,config){
         d.resolve(data);
@@ -40,7 +40,7 @@ angular.module('dataPopulationApp')
       var d = $q.defer();
       var result = $http({
         method: 'GET',
-        url: 'http://api.census.gov/data/timeseries/idb/1year?get=AREA_KM2,NAME,AGE,POP&FIPS=IN&time=2014&SEX=1' + key
+        url: 'https://api.census.gov/data/timeseries/idb/1year?get=AREA_KM2,NAME,AGE,POP&FIPS=IN&time=2014&SEX=1' + key
       });
       result.success(function(data,status,header,config){
         d.resolve(data);
@@ -56,7 +56,7 @@ angular.module('dataPopulationApp')
       var d = $q.defer();
       var result = $http({
         method: 'GET',
-        url: 'http://api.census.gov/data/timeseries/idb/1year?get=AREA_KM2,NAME,AGE,POP&FIPS='+ country + '&time=' + year +'&SEX=0' + key
+        url: 'https://api.census.gov/data/timeseries/idb/1year?get=AREA_KM2,NAME,AGE,POP&FIPS='+ country + '&time=' + year +'&SEX=0' + key
       });
       result.success(function(data,status,header,config){
         d.resolve(data);
